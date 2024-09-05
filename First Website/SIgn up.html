@@ -11,14 +11,26 @@
 
             <div>
                 <form>
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="fname">First Name:*</label>
+                    <input type="text" id="fname" name="fname" required><br><br>
                     <label for="lname">Last Name:</label>
                     <input type="text" id="lname" name="lname"><br><br>
                     <label for="gtag">Gamer Tag:</label>
                     <input type="text" id="gtag" name="gtag"><br><br>
-                    <input type="radio" id="age" name="age">
-                    <label for="age">I am 18 years or older</label><br><br>
+                    <label for="birthday">Birthday:*</label>
+                    <input type="date" id="birthday" name="birthday" required><br><br>
+                    <label for="ride">Car Pooling:</label><br>
+                    <input type="checkbox" id="ride1" name="ride1" value="have">
+                    <label for="ride1">I have a ride there</label><br>
+                    <input type="checkbox" id="ride2" name="ride2" value="need">
+                    <label for="ride2">I need a ride there</label><br>
+                    <input type="checkbox" id="ride3" name="ride3" value="driver">
+                    <label for="ride3">I can be a driver for others</label><br><br>
+                    <label for="robot">To prove your not a robot, what is the 4 letter word for the delicious drink that we drink during the beerlympics?*</label>
+                    <input type="text" id="robot" name="robot" pattern="[A-Za-z]{4}" title="4 letter drink" required><br><br>
+                    <input type="radio" id="agreement" name="agreement" value="yes" required>
+                    <label for="agreement">I agree to drink responsably*</label><br><br>
+                    <input type="submit" value="Submit">
                 </form>
 
             </div>
