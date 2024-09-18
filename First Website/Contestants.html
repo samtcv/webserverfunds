@@ -8,19 +8,35 @@
         <div>
             <h1>The Contestants</h1>
             <p>
-                In the Beerlympics we all give ourselves funny names to go as and we all put it on a bit board to mark our points.
+                In the Beerlympics we all give ourselves funny names and we all put it on a big board to mark our points.
             </p>
         </div>
         
+        
+
+        <script>
+            function contestant24() {
+                document.getElementById("Con24intro").innerHTML= "2024 was the first year of the Beerlympics and there's many more to come, here our the contestants that showed up to the 2024 Beerlympics!" ;
+                document.getElementById("ConIMG24").style.display="block" ;
+                document.getElementById("Con24show").style.display="none" ;
+                document.getElementById("Con24list").style.display="block" ;
+
+
+            }
+        </script>
+                
         <div>
             <h2>Our 2024 Contestants</h2>
-            <p>
-                2024 was the first year of the Beerlympics and ther's many more to come, here our the contestants that showed up this year.
+            
+            <p id="Con24intro">
+                Click to see the 2024 contestants!
             </p>
 
-            <img src="img/2024contestants.jpg" width="500">
+            <button type="button" id="Con24show" name="contestants24" onclick="contestant24()">Show</button>
 
-            <ol>
+            <img id="ConIMG24" style="display:none" src="img/2024contestants.jpg" width="500">
+
+            <ol id="Con24list" style="display:none">
                 <li>Lord Jager</li>
                 <li>Sangria Squirel</li>
                 <li>Willy</li>
@@ -45,6 +61,7 @@
             <a href="index.html">Home Page</a><br>
             <a href="signup.html">Sign Up!</a><br><br>
         </div>
+
 
     </body>
 </html>
