@@ -33,6 +33,20 @@
             </ol>
         </div>
         
+        <button type="button" onclick="getText('text/BeerlympicsInfo.txt')">More info</button>
+        
+        <script>
+                
+        async function getText(file) {
+            let myObject = await fetch(file);
+            let myText = await myObject.text();
+            document.getElementById("info").innerHTML = myText;
+        }
+
+        </script>
+
+        <p id="info"></p>
+
         <div>
             <h2>Links</h2>
             <a href="Contestants.html">The Contestants</a><br>

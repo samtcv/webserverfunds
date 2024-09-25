@@ -9,6 +9,16 @@
                 <p>Sign up to joing the beerlympics and compete in many games and challenges with a beer in hand!</p>
             </div>
 
+            <script>
+                function reqF() {
+                    let x=document.getElementById("robot")
+                    if(x.value.length == 0) {
+                        alert('Required field') ;
+                    }
+                        
+                }
+            </script>
+
             <div>
                 <form>
                     <label for="fname">First Name:*</label>
@@ -27,7 +37,7 @@
                     <input type="checkbox" id="ride3" name="ride3" value="driver">
                     <label for="ride3">I can be a driver for others</label><br><br>
                     <label for="robot">To prove your not a robot, what is the 4 letter word for the delicious drink that we drink during the beerlympics?*</label>
-                    <input type="text" id="robot" name="robot" pattern="[A-Za-z]{4}" title="4 letter drink" required><br><br>
+                    <input type="text" id="robot" name="robot" pattern="[A-Za-z]{4}" title="4 letter drink" onblur="reqF()" required><br><br>
                     
                     <button type="button" onclick="alert(`It's beer!`)">Hint!</button><br><br>
                     

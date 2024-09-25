@@ -20,10 +20,19 @@
                 document.getElementById("ConIMG24").style.display="block" ;
                 document.getElementById("Con24show").style.display="none" ;
                 document.getElementById("Con24list").style.display="block" ;
-
-
+                document.getElementById("Con24hide").style.display="block" ;
             }
         </script>
+
+<script>
+    function contestant24hide() {
+        document.getElementById("Con24intro").innerHTML= "Click to see the 2024 contestants!" ;
+        document.getElementById("ConIMG24").style.display="none" ;
+        document.getElementById("Con24show").style.display="block" ;
+        document.getElementById("Con24list").style.display="none" ;
+        document.getElementById("Con24hide").style.display="none" ;
+    }
+</script>
                 
         <div>
             <h2>Our 2024 Contestants</h2>
@@ -48,12 +57,39 @@
                 <li>Glizzy Gladiator</li>
                 <li>Chi Goon</li>
             </ol>
+
+            <button type="button" id="Con24hide" name="Con24hide" style="display:none" onclick="contestant24hide()">Hide</button>
+
         </div>
+
+        <script> 
+            function winner24() {
+                document.getElementById("win24intro").innerHTML= "The Winner for the 2024 Beerlypics was SONIC!" ;
+                document.getElementById("winIMG24").style.display="block" ;
+                document.getElementById("win24show").style.display="none" ;
+                document.getElementById("win24hide").style.display="block" ;
+            }
+        </script>
+
+        <script> 
+            function winner24hide() {
+                document.getElementById("win24intro").innerHTML= "Click to see the 2024 winner!" ;
+                document.getElementById("winIMG24").style.display="none" ;
+                document.getElementById("win24show").style.display="block" ;
+                document.getElementById("win24hide").style.display="none" ;
+            }
+        </script>
 
         <div>
             <h2>2024 Winner!</h2>
-            <p>The Winner for the 2024 Beerlypics was SONIC!</p>
-            <img src="img/2024winner.jpg" width="300">
+            <p id="win24intro">Click to see the 2024 winner!</p>
+
+            <button type="button" id="win24show" name="win24" onclick="winner24()">Show</button>
+
+            <img id="winIMG24" style="display:none" src="img/2024winner.jpg" width="300">
+
+            <button type="button" id="win24hide" name="win24hide" style="display:none" onclick="winner24hide()">Hide</button>
+
         </div>
 
         <div>
