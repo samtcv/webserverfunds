@@ -25,8 +25,8 @@
                 <form action="response.php" method="POST">
                     <label for="fname">First Name:*</label>
                     <input type="text" id="fname" name="fname" required><br><br>
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="lname">Last Name:*</label>
+                    <input type="text" id="lname" name="lname" required><br><br>
                     <label for="gtag">Gamer Tag:</label>
                     <input type="text" id="gtag" name="gtag"><br><br>
                     <label for="birthday">Birthday:*</label>
@@ -36,14 +36,14 @@
                     <label for="ride1">I have a ride there</label><br>
                     <input type="checkbox" id="ride2" name="ride2" value="need">
                     <label for="ride2">I need a ride there</label><br>
-                    <input type="checkbox" id="ride3" name="ride3" value="driver">
+                    <input type="checkbox" id="ride3" name="ride3" value="are">
                     <label for="ride3">I can be a driver for others</label><br><br>
                     <label for="robot">To prove your not a robot, what is the 4 letter word for the delicious drink that we drink during the beerlympics?*</label>
                     <input type="text" id="robot" name="robot" pattern="[A-Za-z]{4}" title="4 letter drink" onblur="reqF()" required><br><br>
                     
                     <button type="button" onclick="alert(`It's beer!`)">Hint!</button><br><br>
                     
-                    <input type="radio" id="agreement" name="agreement" value="yes" required>
+                    <input type="radio" id="agreement" name="agreement" value="drink responsably" required>
                     <label for="agreement">I agree to drink responsably*</label><br><br>
                     <input type="submit" value="Submit">
                 </form>
