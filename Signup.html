@@ -9,8 +9,10 @@
                 <p>Sign up to joing the beerlympics and compete in many games and challenges with a beer in hand!</p>
             </div>
 
+
+            <!--If not-a-robot field is empty and unselected, set alarm saying reuired field-->
             <script>
-                function reqF() {
+                function reqF() {   
                     let x=document.getElementById("robot")
                     if(x.value.length == 0) {
                         alert('Required field') ;
