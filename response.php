@@ -7,7 +7,7 @@
         <body>
             <div>
             <p> Welcome <?= htmlspecialchars($_POST['fname']) . " " . htmlspecialchars($_POST['lname']) ?> 
-            to the BEERLYMPIC! ...or should I say <?= html special chars($_POST['gtag']) ?>!!
+            to the BEERLYMPIC! ...or should I say <?= htmlspecialchars($_POST['gtag']) ?>!!
             </p> <br>
 
             <p> You've selected that you <br>
