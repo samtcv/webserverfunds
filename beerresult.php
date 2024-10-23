@@ -17,9 +17,9 @@
                 if (!$conn) {
                     die("connection failed: {mysqli_connect_error()}");
                 }
-                $sql1 = "select Name, Fav_beer_type from fav_beer where Fav_beer_type = '{$beer_type}';";
-                $sql2 = "select Name, Fav_Beer from fav_beer where Fav_beer = '{$fav_beer}';";
-                $result = mysqli_query($conn, $sql1);
+                $sql = "select Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer_type = '{$beer_type}';";
+                $sql2 = "select Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer_type = '{$fav_beer}';";
+                $result = mysqli_query($conn, $sql);
                 $result2 = mysqli_query($conn, $sql2);
             
             ?>
