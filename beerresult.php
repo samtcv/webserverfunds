@@ -7,6 +7,7 @@
             <?php
                 $beer_type = htmlspecialchars($_POST["beertype"]);
                 $fav_beer = htmlspecialchars($_POST["fbeer"]);
+                $name = htmlspecialchars($_POST["fname"]);
                 $server = "localhost";
                 $username = "sam";
                 $password = "2004";
@@ -21,7 +22,10 @@
                 $sql2 = "select Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer = '{$fav_beer}';";
                 $result = mysqli_query($conn, $sql);
                 $result2 = mysqli_query($conn, $sql2);
-            
+                
+                $sqlup = "insert into fav_beer (Name, Fav_beer_type, Fav_beer)
+                 values ('{$name}','{$beer_type}','{$fav_beer}');";
+                $result3 = mysqli_query($conn, $sqlup);
             ?>
 
 
