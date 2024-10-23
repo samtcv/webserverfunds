@@ -5,7 +5,7 @@
 
             <!-- sql connect -->
             <?php
-                $beer_type = htmlspecialchars($_get["beertype"]);
+                $beer_type = htmlspecialchars($_POST["beertype"]);
                 $server = "localhost";
                 $username = "sam";
                 $password = "2004";
