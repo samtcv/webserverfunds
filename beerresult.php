@@ -18,7 +18,7 @@
                     die("connection failed: {mysqli_connect_error()}");
                 }
                 $sql = "select Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer_type = '{$beer_type}';";
-                $sql2 = "select Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer_type = '{$fav_beer}';";
+                $sql2 = "select Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer = '{$fav_beer}';";
                 $result = mysqli_query($conn, $sql);
                 $result2 = mysqli_query($conn, $sql2);
             
