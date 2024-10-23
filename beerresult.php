@@ -18,8 +18,9 @@
                     die("connection failed: {mysqli_connect_error()}");
                 }
                 $sql1 = "select Name, Fav_beer_type from fav_beer where Fav_beer_type = '{$beer_type}';";
-                $sql2 = "select Name, Fav_Beer";
-                $result = mysqli_query($conn, $sql);
+                $sql2 = "select Name, Fav_Beer from fav_beer where Fav_beer = '{$fav_beer}';";
+                $result = mysqli_query($conn, $sql1);
+                $result2 = mysqli_query($conn, $sql2);
             
             ?>
 
@@ -45,7 +46,7 @@
                 <br><br>
                 People who's favourite beer is also <?= $fav_beer ?>:<br>
                 <?php
-                    foreach($result as $row)
+                    foreach($result2 as $row)
                     {
                         echo "{$row['Name']} - Favourite beer type: {$row['Fav_beer_type']}\n";
                     }
