@@ -18,8 +18,8 @@
                 if (!$conn) {
                     die("connection failed: {mysqli_connect_error()}");
                 }
-                $sql = "select Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer_type = '{$beer_type}';";
-                $sql2 = "select Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer = '{$fav_beer}';";
+                $sql = "select distinct Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer_type = '{$beer_type}';";
+                $sql2 = "select distinct Name, Fav_beer_type, Fav_beer from fav_beer where Fav_beer = '{$fav_beer}';";
                 $result = mysqli_query($conn, $sql);
                 $result2 = mysqli_query($conn, $sql2);
                 
@@ -43,7 +43,7 @@
                 <?php
                     foreach($result as $row)
                     {
-                        echo "{$row['Name']} - Favourite beer: {$row['Fav_beer']}\n";
+                        echo "{$row['Name']} - Favourite beer: {$row['Fav_beer']}<br>\n" ; 
                     }
                     mysqli_close($conn);
                 ?>
@@ -52,7 +52,7 @@
                 <?php
                     foreach($result2 as $row)
                     {
-                        echo "{$row['Name']} - Favourite beer type: {$row['Fav_beer_type']}\n";
+                        echo "{$row['Name']} - Favourite beer type: {$row['Fav_beer_type']}<br>\n";
                     }
                     mysqli_close($conn);
                 ?>
