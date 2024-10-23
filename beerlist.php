@@ -51,8 +51,11 @@
                         
                         ?>
                     </select>
-                    <br/>
-                    <input type="submit" value="submit"/>
+                    <br><br>
+                    <label for="fbeer">Favourite Beer:</label>
+                    <input type="text" id="fbeer" name="fbeer" required><br><br>
+
+                    <input type="submit" value="submit"/><br>
                 </form>
 
             </div>

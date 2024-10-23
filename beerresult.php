@@ -6,6 +6,7 @@
             <!-- sql connect -->
             <?php
                 $beer_type = htmlspecialchars($_POST["beertype"]);
+                $fav_beer = htmlspecialchars($_POST["fbeer"]);
                 $server = "localhost";
                 $username = "sam";
                 $password = "2004";
@@ -16,7 +17,8 @@
                 if (!$conn) {
                     die("connection failed: {mysqli_connect_error()}");
                 }
-                $sql = "select distinct Name, Fav_beer_type from fav_beer where Fav_beer_type = '{$beer_type}';";
+                $sql1 = "select Name, Fav_beer_type from fav_beer where Fav_beer_type = '{$beer_type}';";
+                $sql2 = "select Name, Fav_Beer";
                 $result = mysqli_query($conn, $sql);
             
             ?>
@@ -31,14 +33,25 @@
             </div>
 
             <div>
-                You selected favourite beer type <?= $beer_type ?>.<br/>
+                
+                People who's favourite beer type is also <?= $beer_type ?>:<br>
                 <?php
                     foreach($result as $row)
                     {
-                        echo "{$row['Name']}'s favourite beer type is also {$row['Fav_beer_type']}\n";
+                        echo "{$row['Name']} - Favourite beer: {$row['Fav_beer']}\n";
                     }
                     mysqli_close($conn);
                 ?>
+                <br><br>
+                People who's favourite beer is also <?= $fav_beer ?>:<br>
+                <?php
+                    foreach($result as $row)
+                    {
+                        echo "{$row['Name']} - Favourite beer type: {$row['Fav_beer_type']}\n";
+                    }
+                    mysqli_close($conn);
+                ?>
+                <br><br>
 
             </div>
 
