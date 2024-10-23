@@ -46,6 +46,7 @@
                 <h2>Links</h2>
                 <a href="index.html">Home Page</a><br>
                 <a href="Contestants.html">The contestants</a><br>
+                <a href="beerlist.php">Favourite Beers</a><br>
                 <a href="Signup.html">Signup!</a><br><br>
             </div>
         </body>
