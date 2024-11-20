@@ -14,7 +14,7 @@
             <script>
 
                 async function toggle() {   
-                    let file = await fetch(gpio.php);
+                    let file = await fetch("gpio.php");
                 }
                 
             </script>
