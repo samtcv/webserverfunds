@@ -12,7 +12,6 @@
             
 
             <script>
-                getText("gpio.pph");
 
                 async function toggle() {   
                     let file = await fetch(gpio.php);
