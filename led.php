@@ -10,10 +10,7 @@
             </div>
 
             
-            
 
-
-            <!--If not-a-robot field is empty and unselected, set alarm saying reuired field-->
             <script>
                 
 
@@ -29,7 +26,7 @@
                 
             </script>
 
-            <?= $output `gpio mode ` ?>
+
 
             <div>
                 <form action="response.php" method="POST">
