@@ -26,7 +26,7 @@
         <body>
             <div>
                 <h1>Favourite beers</h1>
-                <p>See who has the same favourite beer as you!</p>
+                <p>See who has the same favourite beer as you!  </p>
             </div>
 
             
