@@ -12,16 +12,12 @@
             
 
             <script>
-                
+                getText("gpio.pph");
 
-                function set1() {   
-                    <?= $output `gpio write 25 1`; ?>
-                }
-                function set0() {
-                    <?= $output `gpio write 25 0`; ?>
-                }
-                function toggle() {
-                    <?= $output `gpio toggle 25`; ?>
+                async function toggle() {   
+                    let file = await fetch(gpio.php);
+                    // let myText = await myobject.text();
+                    document.getElementById("demo").innerHTML = "toggle successfully";
                 }
                 
             </script>
@@ -31,8 +27,6 @@
             <div>
                 <form action="response.php" method="POST">
             
-                    <button type="button" onclick="set1()">On</button><br><br>
-                    <button type="button" onclick="set0()">Off</button><br><br>
                     <button type="button" onclick="toggle()">Toggle</button><br><br>
                 
                 </form>
