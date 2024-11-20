@@ -22,7 +22,7 @@
 
 
             <div>
-                <form action="response.php">
+                <form>
             
                     <button type="button" onclick="toggle()">Toggle</button><br><br>
                 
