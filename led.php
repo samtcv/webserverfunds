@@ -15,8 +15,6 @@
 
                 async function toggle() {   
                     let file = await fetch(gpio.php);
-                    // let myText = await myobject.text();
-                    document.getElementById("demo").innerHTML = "toggle successfully";
                 }
                 
             </script>
@@ -24,7 +22,7 @@
 
 
             <div>
-                <form action="response.php" method="POST">
+                <form action="response.php">
             
                     <button type="button" onclick="toggle()">Toggle</button><br><br>
                 
